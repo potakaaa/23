@@ -1,5 +1,5 @@
 import React from "react";
-import ImagePuzzle from "../components/client/ImagePuzzle";
+import ImagePuzzle from "./ImagePuzzle";
 
 const PuzzlePage = () => {
   return (
