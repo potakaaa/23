@@ -1,6 +1,11 @@
 import {create} from 'zustand';
 
-export const useDate = create((set) => ({
-    date: Date.now(),
-    setDate: (date: Date) => set({date}),
+interface DateState {
+    date: Date;
+    setDate: (date: Date | undefined) => void;
+  }
+
+export const useDate = create<DateState>((set) => ({
+    date: new Date(),
+    setDate: (date) => set({date: date ?? new Date()}),
 }))

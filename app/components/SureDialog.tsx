@@ -9,6 +9,7 @@ import {
   DialogHeader,
 } from "@/components/ui/dialog";
 import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const SureDialog = ({
@@ -18,6 +19,8 @@ const SureDialog = ({
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }) => {
+  const router = useRouter();
+
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="w-80 rounded-lg shadow-lg">
@@ -33,12 +36,17 @@ const SureDialog = ({
           <DialogClose asChild>
             <Button
               onClick={() => setIsOpen(false)}
-              className="bg-transparent text-popover-foreground shadow-none"
+              className="bg-transparent text-popover-foreground shadow-none hover:text-popover transition duration-300 hover:bg-destructive"
             >
               Cancel
             </Button>
           </DialogClose>
-          <Button onClick={() => setIsOpen(false)}>Yes</Button>
+          <Button
+            onClick={() => router.push("/happy23")}
+            className="hover:bg-black transition duration-300"
+          >
+            Yes
+          </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>

@@ -12,7 +12,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-import { useDate } from "./store/globals";
+import { useDate } from "../store/globals";
 
 const DatePicker = () => {
   const date = useDate((state: any) => state.date);
@@ -35,7 +35,7 @@ const DatePicker = () => {
         <Calendar
           mode="single"
           selected={date}
-          onSelect={setDate}
+          onSelect={(newDate) => setDate(newDate ?? new Date())}
           initialFocus
         />
       </PopoverContent>

@@ -1,7 +1,6 @@
 import React from "react";
-import PuzzlePage from "./puzzle/page";
-import DatePicker from "./DatePicker";
-import SubmitDate from "./SubmitDate";
+import DatePicker from "./components/DatePicker";
+import SubmitDate from "./components/SubmitDate";
 
 const page = () => {
   return (

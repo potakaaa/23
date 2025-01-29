@@ -9,7 +9,7 @@ const PuzzlePage = () => {
     >
       <div
         id="puzzle-container"
-        className="h-[390px] w-10/12 border border-primary border-opacity-0 rounded-lg overflow-hidden"
+        className="h-5/6 w-10/12 border border-primary border-opacity-0 rounded-lg overflow-hidden justify-center items-center self-center"
       >
         <ImagePuzzle />
       </div>
