@@ -5,7 +5,7 @@ const PuzzlePage = () => {
   return (
     <div
       id="page-container"
-      className="w-full flex flex-col justify-center items-center space-y-5"
+      className="w-full h-screen flex flex-col justify-center items-center space-y-5"
     >
       <div
         id="puzzle-container"
@@ -14,7 +14,7 @@ const PuzzlePage = () => {
         <ImagePuzzle />
       </div>
       <div className="flex w-10/12">
-        <p className="font-semibold">No cheating!!!</p>
+        <p className="font-semibold tracking-tight text-sm">No cheating!!!</p>
       </div>
     </div>
   );
