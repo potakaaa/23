@@ -67,10 +67,19 @@ export default {
 					transform: "translateY(0)"
 				}
 			},
+			dissolve: {
+				"0%, 71%": {
+					opacity: "1"
+				},
+				"100%": {
+					opacity: "0"
+				}
+			}
 			
 		},
 		animation: {
-			slidein: "slidein 1s ease 300ms"
+			slidein: "slidein 1s ease 300ms forwards",
+			dissolve: "dissolve 2s ease-out 8s forwards"
 		}
   	}
   },
