@@ -8,7 +8,7 @@ const BackButton = () => {
   const router = useRouter();
   return (
     <Button
-      className="mt-10 transition duration-300 hover:shadow-md"
+      className="w-16 mt-10 transition duration-300 hover:shadow-md animate-slidein opacity-0"
       variant="outline"
       onClick={() => router.back()}
     >

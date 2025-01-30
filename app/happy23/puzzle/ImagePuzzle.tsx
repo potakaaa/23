@@ -9,7 +9,7 @@ const ImagePuzzle = () => {
   return (
     <JigsawPuzzle
       imageSrc={imageSrc}
-      rows={3}
+      rows={4}
       columns={4}
       onSolved={() => alert("Solved!")}
     />
