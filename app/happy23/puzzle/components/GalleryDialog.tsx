@@ -7,10 +7,11 @@ import {
   DialogContent,
   DialogFooter,
   DialogHeader,
+  DialogTitle,
 } from "@/components/ui/dialog";
-import { DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
 import { useRouter } from "next/navigation";
 import React from "react";
+import Gallery from "./Gallery";
 
 const GalleryDialog = ({
   isOpen,
@@ -21,12 +22,16 @@ const GalleryDialog = ({
 }) => {
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
-      <DialogContent>
+      <DialogContent className="w-80 rounded-lg shadow-lg">
         <DialogHeader>
-          <DialogTitle>Photo Gallery</DialogTitle>
-          <DialogDescription>Select a photo to puzzle</DialogDescription>
+          <DialogTitle className="font-bold">Photo Gallery</DialogTitle>
+          <div className="flex items-center justify-center flex-col">
+            <p className="text-sm">Select a photo to puzzle</p>
+            <Gallery />
+          </div>
         </DialogHeader>
-        <DialogFooter>
+
+        <DialogFooter className="gap-2">
           <DialogClose asChild>
             <Button onClick={() => setIsOpen(false)} variant="outline">
               Cancel
