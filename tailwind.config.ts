@@ -79,7 +79,7 @@ export default {
 		},
 		animation: {
 			slidein: "slidein 1s ease 300ms forwards",
-			dissolve: "dissolve 2s ease-out 8s forwards"
+			dissolve: "dissolve 2s ease-out 8s forwards",
 		}
   	}
   },

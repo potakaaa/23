@@ -20,7 +20,13 @@ const Gallery = () => {
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <Image src={item} alt={item} width={600} height={400} />
+                  <Image
+                    src={item}
+                    alt={item}
+                    width={450}
+                    height={450}
+                    className="shadow-lg rounded-md"
+                  />
                 </CardContent>
               </Card>
             </div>
