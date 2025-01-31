@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { ArrowLeft, Ban } from "lucide-react";
 import React from "react";
 import BackButton from "../components/BackButton";
 import Image from "next/image";
