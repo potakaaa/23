@@ -7,7 +7,7 @@ const PuzzlePage = () => {
   return (
     <div
       id="page-container"
-      className="w-full h-screen flex flex-col justify-center items-center space-y-10"
+      className="w-full h-screen flex flex-col justify-center items-center space-y-10 overflow-hidden"
     >
       <div
         id="title-container"

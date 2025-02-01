@@ -1,3 +1,7 @@
 .jigsaw-puzzle__piece--solved {
     border-width: 0;
 }
+
+.jigsaw-puzzle__piece--dragging ~ #page-container{
+    overflow:hidden;
+}
