@@ -1,5 +1,6 @@
 import {create} from 'zustand';
-import { imageSrc } from "@/app/provider/global";
+import { galleryImg, imageSrc } from "@/app/provider/global";
+import { act } from 'react';
 
 interface DateState {
     date: Date;
@@ -12,6 +13,11 @@ export const useDate = create<DateState>((set) => ({
 }))
 
 export const useImage = create((set) => ({
-  image: imageSrc,
-  setImage: (image: any) => set({image}),
+  image: galleryImg[0],
+  setImage: (image: string) => set({image}),
+}))
+
+export const useActiveIndex = create((set) => ({
+  activeIndex: 0,
+  setActiveIndex: (activeIndex: number) => set({activeIndex}),
 }))

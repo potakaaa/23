@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/dialog";
 import React from "react";
 import Gallery from "./Gallery";
+import { useActiveIndex, useImage } from "@/app/store/globals";
+import { galleryImg } from "@/app/provider/global";
 
 const GalleryDialog = ({
   isOpen,
@@ -19,6 +21,14 @@ const GalleryDialog = ({
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
 }) => {
+  const activeIndex = useActiveIndex((state: any) => state.activeIndex);
+  const setImage = useImage((state: any) => state.setImage);
+
+  const handleSelect = () => {
+    setIsOpen(false);
+    const newImage = galleryImg[activeIndex];
+    setImage(newImage);
+  };
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
       <DialogContent className="w-80 rounded-lg shadow-lg">
@@ -36,7 +46,7 @@ const GalleryDialog = ({
               Cancel
             </Button>
           </DialogClose>
-          <Button onClick={() => setIsOpen(false)}>Select</Button>
+          <Button onClick={handleSelect}>Select</Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
