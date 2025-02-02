@@ -21,3 +21,8 @@ export const useActiveIndex = create((set) => ({
   activeIndex: 0,
   setActiveIndex: (activeIndex: number) => set({activeIndex}),
 }))
+
+export const useSolved = create((set) => ({
+  isSolved: false,
+  setIsSolved: (isSolved: boolean) => set({isSolved}),
+}))
