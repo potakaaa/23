@@ -13,8 +13,10 @@ const ImagePuzzle = () => {
   const isSolved = useSolved((state: any) => state.isSolved);
 
   const handleOnSolved = () => {
-    setIsSolved(true);
-    alert("Congratulations love!");
+    setTimeout(() => {
+      setIsSolved(true);
+      alert("Congratulations love!");
+    }, 0);
   };
 
   return (
@@ -22,8 +24,8 @@ const ImagePuzzle = () => {
       {isSolved && <ConfettiDrop />}
       <JigsawPuzzle
         imageSrc={imageSrc}
-        rows={1}
-        columns={2}
+        rows={4}
+        columns={4}
         onSolved={() => handleOnSolved()}
       />
     </>

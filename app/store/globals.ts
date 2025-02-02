@@ -26,3 +26,8 @@ export const useSolved = create((set) => ({
   isSolved: false,
   setIsSolved: (isSolved: boolean) => set({isSolved}),
 }))
+
+export const useMusic = create((set) => ({
+  playCount: 0,
+  addPlayCount: () => set((state: any) => ({playCount: state.playCount + 1})),
+}))
