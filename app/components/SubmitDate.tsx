@@ -21,12 +21,13 @@ const SubmitDate = () => {
     if (
       date.getMonth() === 1 &&
       date.getDate() === 8 &&
-      date.getYear() === 2025
+      date.getFullYear() === 2025
     ) {
       console.log("Do this!");
       setIsSureOpen(true);
     } else {
       console.log("Dont do this.");
+      console.log(date.getFullYear());
       router.push("/idku");
     }
   };
