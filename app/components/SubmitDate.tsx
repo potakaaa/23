@@ -18,7 +18,11 @@ const SubmitDate = () => {
   const router = useRouter();
 
   const handleSubmitDate = () => {
-    if (date.getMonth() === 1 && date.getDate() === 8) {
+    if (
+      date.getMonth() === 1 &&
+      date.getDate() === 8 &&
+      date.getYear() === 2025
+    ) {
       console.log("Do this!");
       setIsSureOpen(true);
     } else {
