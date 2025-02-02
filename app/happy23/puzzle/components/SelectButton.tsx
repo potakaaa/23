@@ -10,7 +10,7 @@ const SelectButton = () => {
     <div>
       <Button
         variant={"outline"}
-        className="animate-slidein opacity-0 hover:shadow-md shadow"
+        className="animate-slidein [--slidein-delay:300ms] opacity-0 hover:shadow-md shadow"
         onClick={() => setIsOpen(!isOpen)}
       >
         Open gallery

@@ -37,6 +37,7 @@ export const ValDialog = ({
 
   const handleOnYes = () => {
     alert("Yey! February 14 @ TBA :)");
+    setIsOpen(false);
   };
 
   return (

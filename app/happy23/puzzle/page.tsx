@@ -13,16 +13,16 @@ const PuzzlePage = () => {
         id="title-container"
         className="items-center justify-center flex flex-col absolute top-10"
       >
-        <p className="animate-slidein opacity-0 font-extrabold text-primary text-2xl drop-shadow">
+        <p className="animate-slidein [--slidein-delay:300ms] opacity-0 font-extrabold text-primary text-2xl drop-shadow">
           PUZZLE GAME
         </p>
-        <p className="animate-slidein opacity-0 font-light text-xs text-end self-end">
+        <p className="animate-slidein [--slidein-delay:300ms] opacity-0 font-light text-xs text-end self-end">
           by gugu
         </p>
       </div>
       <div
         id="puzzle-container"
-        className=" my-16 h-auto w-10/12 border border-primary border-opacity-5 bg-card rounded-lg justify-center items-center self-center overflow-hidden animate-slidein opacity-0 shadow-lg touch-none"
+        className=" my-16 h-auto w-10/12 border border-primary border-opacity-5 bg-card rounded-lg justify-center items-center self-center overflow-hidden animate-slidein [--slidein-delay:300ms] opacity-0 shadow-lg touch-none"
       >
         <ImagePuzzle />
       </div>
