@@ -4,7 +4,6 @@ import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import "./puzzle.css";
 import { useImage, useSolved } from "@/app/store/globals";
-import { useState } from "react";
 import ConfettiDrop from "../components/ConfettiDrop";
 
 const ImagePuzzle = () => {
