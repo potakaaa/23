@@ -23,7 +23,7 @@ const DatePicker = () => {
         <Button
           variant={"outline"}
           className={cn(
-            "w-[280px] justify-start text-left font-normal",
+            "w-[280px] justify-start text-left font-normal animate-slidein [--slidein-delay:400ms] opacity-0",
             !date && "text-muted-foreground"
           )}
         >

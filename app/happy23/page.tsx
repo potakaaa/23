@@ -3,6 +3,7 @@ import ConfettiDrop from "./components/ConfettiDrop";
 import PressMe from "./components/PressMe";
 import PlayPuzzle from "./components/PlayPuzzle";
 import MusicPlayer from "./components/MusicPlay";
+import ValButton from "./components/ValButton";
 
 const Happy23 = () => {
   return (
@@ -10,16 +11,17 @@ const Happy23 = () => {
       <ConfettiDrop />
       <MusicPlayer />
       <div className="flex flex-col space-y-1">
-        <p className="font-extrabold tracking-tight text-4xl drop-shadow text-primary animate-slidein opacity-0">
+        <p className="font-extrabold tracking-tight text-4xl drop-shadow text-primary animate-slidein [--slidein-delay:300ms] opacity-0">
           Happy 23rd
         </p>
-        <p className="font-bold tracking-tighter text-center text-2xl animate-slidein drop-shadow-sm text-primary opacity-0">
+        <p className="font-bold tracking-tighter text-center text-2xl animate-slidein [--slidein-delay:300ms] drop-shadow-sm text-primary opacity-0">
           Monthsarry!
         </p>
       </div>
       <div className="flex flex-col space-y-3">
         <PressMe />
         <PlayPuzzle />
+        <ValButton />
       </div>
     </div>
   );

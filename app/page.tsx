@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center space-y-1">
       <div className="space-y-2 flex flex-col">
-        <p className="font-medium tracking-tight text-left">
+        <p className="font-medium tracking-tight text-left animate-slidein [--slidein-delay:300ms] opacity-0">
           What's the date today?
         </p>
         <DatePicker />

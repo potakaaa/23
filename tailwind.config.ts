@@ -78,8 +78,8 @@ export default {
 			
 		},
 		animation: {
-			slidein: "slidein 1s ease 300ms forwards",
 			dissolve: "dissolve 2s ease-out 8s forwards",
+			slidein: "slidein 1s ease var(--slidein-delay, 0) forwards"
 		}
   	}
   },

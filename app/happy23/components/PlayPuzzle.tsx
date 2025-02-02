@@ -8,7 +8,7 @@ const PlayPuzzle = () => {
   return (
     <Button
       variant={"outline"}
-      className="border-primary border shadow-md hover:bg-slate-50 transition animate-slidein opacity-0"
+      className="border-primary border shadow-md hover:bg-slate-50 transition animate-slidein [--slidein-delay:350ms] opacity-0"
       onClick={() => router.push("/happy23/puzzle")}
     >
       Play Puzzle

@@ -37,7 +37,7 @@ const SubmitDate = () => {
       <PopoverTrigger asChild>
         <Button
           onClick={() => setIsOpen(!isOpen)}
-          className="transition hover:bg-black hover:shadow-md duration-300"
+          className="transition hover:bg-black hover:shadow-md duration-300 animate-slidein [--slidein-delay:500ms] opacity-0"
         >
           Submit
         </Button>
