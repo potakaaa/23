@@ -22,7 +22,7 @@ const PuzzlePage = () => {
       </div>
       <div
         id="puzzle-container"
-        className=" my-16 h-auto w-10/12 border border-primary border-opacity-5 bg-card rounded-lg justify-center items-center self-center overflow-auto animate-slidein opacity-0 shadow-lg"
+        className=" my-16 h-auto w-10/12 border border-primary border-opacity-5 bg-card rounded-lg justify-center items-center self-center overflow-hidden animate-slidein opacity-0 shadow-lg touch-none"
       >
         <ImagePuzzle />
       </div>
