@@ -2,7 +2,7 @@ import React from "react";
 import ConfettiDrop from "./components/ConfettiDrop";
 import PressMe from "./components/PressMe";
 import PlayPuzzle from "./components/PlayPuzzle";
-import MusicPlayer from "./components/MusicPlay";
+import MusicPlayer from "./components/MusicPlayer";
 import ValButton from "./components/ValButton";
 
 const Happy23 = () => {
