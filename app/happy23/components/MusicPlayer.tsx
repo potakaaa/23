@@ -10,7 +10,7 @@ const MusicPlayer = () => {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
-      const newAudio = new Audio("/music/electric.wav");
+      const newAudio = new Audio("/music/electric.ogg");
       setAudio(newAudio);
 
       if (playCount === 0) {
