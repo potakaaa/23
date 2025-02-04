@@ -6,20 +6,23 @@ import { useEffect, useState } from "react";
 const MusicPlayer = () => {
   const playCount = useMusic((state: any) => state.playCount);
   const addPlayCount = useMusic((state: any) => state.addPlayCount);
-
-  const audio = new Audio("music/electric.wav");
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    if (playCount === 0 && audio) {
-      audio.volume = 0.1;
-      audio.loop = true;
-      audio.play().catch((err) => console.log("Autoplay blocked:", err));
-      addPlayCount();
+    if (typeof window !== "undefined") {
+      const newAudio = new Audio("/music/electric.wav");
+      setAudio(newAudio);
+
+      if (playCount === 0) {
+        newAudio.volume = 0.1;
+        newAudio.loop = true;
+        newAudio.play().catch((err) => console.log("Autoplay blocked:", err));
+        addPlayCount();
+      }
     }
-    console.log("Play count: ", playCount);
   }, []);
 
-  return null; // No UI, just playing music in the background
+  return null;
 };
 
 export default MusicPlayer;
