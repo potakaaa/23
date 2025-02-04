@@ -9,7 +9,7 @@ const Happy23 = () => {
   return (
     <div className="flex flex-col h-screen w-full justify-center items-center space-y-10">
       <ConfettiDrop />
-      <MusicPlayer />
+      {/* <MusicPlayer /> */}
       <div className="flex flex-col space-y-1">
         <p className="font-extrabold tracking-tight text-4xl drop-shadow text-primary animate-slidein [--slidein-delay:300ms] opacity-0">
           Happy 23rd
