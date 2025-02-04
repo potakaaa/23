@@ -54,6 +54,7 @@ export const ValDialog = ({
                 width={100}
                 height={100}
                 className="drop-shadow"
+                priority={true}
               />
             </div>
           </DialogDescription>

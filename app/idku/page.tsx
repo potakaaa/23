@@ -12,7 +12,7 @@ const page = () => {
         width={224} // Equivalent to w-56 (56 * 4 = 224px)
         height={224} // Adjust height accordingly (optional)
         alt="404 Error Illustration"
-        priority
+        priority={true}
       />
       <p className="font-bold text-lg tracking-tight">I'M SORRY</p>
       <p className="font-black text-2xl text-primary drop-shadow">

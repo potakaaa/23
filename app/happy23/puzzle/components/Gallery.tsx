@@ -50,6 +50,7 @@ const Gallery = () => {
                     width={450}
                     height={450}
                     className="shadow-lg rounded-md"
+                    priority={true}
                   />
                 </CardContent>
               </Card>
