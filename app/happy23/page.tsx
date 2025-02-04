@@ -1,4 +1,3 @@
-import React from "react";
 import ConfettiDrop from "./components/ConfettiDrop";
 import PressMe from "./components/PressMe";
 import PlayPuzzle from "./components/PlayPuzzle";
