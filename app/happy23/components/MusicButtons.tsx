@@ -1,13 +1,19 @@
 "use client";
 
 import { CirclePause, CirclePlay, SkipBack, SkipForward } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MusicButtons = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audio, setAudio] = useState(new Audio("/music/electric.ogg"));
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+
+  useEffect(() => {
+    setAudio(new Audio("/music/electric.ogg"));
+  }, []);
 
   const handlePlay = () => {
+    if (!audio) return;
+
     if (isPlaying) {
       audio.pause();
       setIsPlaying(false);
@@ -20,6 +26,8 @@ const MusicButtons = () => {
   };
 
   const handleReset = () => {
+    if (!audio) return;
+
     audio.currentTime = 0;
     audio.play();
   };
