@@ -14,6 +14,7 @@ const MusicButtons = () => {
       src: musicSrc,
       format: ["ogg"],
       volume: 0.1,
+      html5: true,
       onplay: () => setIsPlaying(true),
       onpause: () => setIsPlaying(false),
     });
