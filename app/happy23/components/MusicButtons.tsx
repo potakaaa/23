@@ -25,7 +25,7 @@ const MusicButtons = () => {
   };
 
   return (
-    <div className="flex justify-center items-center space-x-7">
+    <div className="flex justify-center items-center space-x-5">
       <button
         onClick={handleReset}
         className="hover:bg-zinc-300 p-1 rounded-full transition duration-300"
