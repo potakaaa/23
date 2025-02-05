@@ -8,28 +8,38 @@ const MusicButtons = () => {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    setAudio(new Audio("/music/electric.ogg"));
+    const audioElem = new Audio("/music/electric.ogg");
+    audioElem.volume = 0.1;
+    audioElem.preload = "auto";
+    setAudio(audioElem);
   }, []);
 
-  const handlePlay = () => {
+  const handlePlay = async () => {
     if (!audio) return;
 
-    if (isPlaying) {
-      audio.pause();
-      setIsPlaying(false);
-    } else {
-      audio.volume = 0.1;
-      audio.preload = "auto";
-      audio.play();
-      setIsPlaying(true);
+    try {
+      if (isPlaying) {
+        audio.pause();
+        setIsPlaying(false);
+      } else {
+        await audio.play();
+        setIsPlaying(true);
+      }
+    } catch (e) {
+      console.error("Audio play failed: ", e);
     }
   };
 
-  const handleReset = () => {
+  const handleReset = async () => {
     if (!audio) return;
 
     audio.currentTime = 0;
-    audio.play();
+    try {
+      await audio.play();
+      setIsPlaying(true);
+    } catch (e) {
+      console.error("Audio reset failed: ", e);
+    }
   };
 
   return (
