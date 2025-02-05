@@ -20,7 +20,7 @@ export const ValDialog = ({
 }: {
   isOpen: boolean;
   setIsOpen: (isOpen: boolean) => void;
-}) => {
+}) => { 
   const router = useRouter();
   const [no, setNo] = useState(20);
   const [index, setIndex] = useState(0);

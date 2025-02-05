@@ -25,7 +25,7 @@ const PuzzlePage = () => {
         className=" my-16 h-auto w-10/12 border border-primary border-opacity-5 bg-card rounded-lg justify-center items-center self-center overflow-hidden animate-slidein [--slidein-delay:300ms] opacity-0 shadow-lg touch-none"
       >
         <ImagePuzzle />
-      </div>
+      </div>    
       <div className="flex flex-col space-y-4 justify-center items-center">
         <SelectButton />
         <BackButton />
