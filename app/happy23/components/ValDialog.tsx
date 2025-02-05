@@ -49,10 +49,10 @@ export const ValDialog = ({
             <div className="flex flex-col items-center gap-2">
               <p>Will you be my Valentines Date?</p>
               <Image
-                src={"/emoji/emoji.png"}
+                src={"/emoji/cat.webp"}
                 alt="emoji"
-                width={100}
-                height={100}
+                width={200}
+                height={200}
                 className="drop-shadow"
                 priority={true}
               />
