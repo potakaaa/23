@@ -4,6 +4,9 @@ import PlayPuzzle from "./components/PlayPuzzle";
 import ValButton from "./components/ValButton";
 import { CirclePlay, Play, SkipBack, SkipForward } from "lucide-react";
 import MusicButtons from "./components/MusicButtons";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { AvatarFallback } from "@radix-ui/react-avatar";
+import { Skeleton } from "@/components/ui/skeleton";
 
 const Happy23 = () => {
   return (
@@ -24,13 +27,23 @@ const Happy23 = () => {
       </div>
       <section
         id="player-container"
-        className="bg-card w-9/12 h-10 rounded-full flex flex-row justify-between items-center animate-slidein [--slidein-delay:300ms] opacity-0 shadow-lg px-8 p-2"
+        className="bg-card w-9/12 h-10 rounded-full flex flex-row justify-between items-center animate-slidein [--slidein-delay:300ms] opacity-0 shadow-lg px-4 p-2"
       >
-        <div className="flex text-left flex-col space-y-0">
-          <p className="text-xs font-bold tracking-tight drop-shadow-sm">
-            Electric Love
-          </p>
-          <p className="text-[10px] font-thin tracking-tighter">Børns ‧ 2015</p>
+        <div className="flex flex-row space-x-2 items-center">
+          <Avatar className="size-6 shadow-md">
+            <AvatarImage src="https://i.scdn.co/image/ab67616d0000b273cc2cf912462d8ae4ef856434" />
+            <AvatarFallback>
+              <Skeleton className="" />
+            </AvatarFallback>
+          </Avatar>
+          <div className="flex text-left flex-col space-y-0">
+            <p className="text-xs font-bold tracking-tight drop-shadow-sm">
+              Electric Love
+            </p>
+            <p className="text-[10px] font-thin tracking-tighter">
+              Børns ‧ 2015
+            </p>
+          </div>
         </div>
         <MusicButtons />
       </section>
