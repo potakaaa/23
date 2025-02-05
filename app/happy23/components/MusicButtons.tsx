@@ -12,6 +12,7 @@ const MusicButtons = () => {
   useEffect(() => {
     soundRef.current = new Howl({
       src: musicSrc,
+      format: ["ogg"],
       volume: 0.1,
       onplay: () => setIsPlaying(true),
       onpause: () => setIsPlaying(false),
