@@ -7,15 +7,14 @@ import { Howl } from "howler";
 const MusicButtons = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const soundRef = useRef<Howl | null>(null);
-  const musicSrc = "/music/electric.ogg";
+  const musicSrc = "/music/electric.aac";
 
   useEffect(() => {
     soundRef.current = new Howl({
       src: musicSrc,
-      format: ["ogg"],
+      format: ["aac"],
       volume: 0.1,
       html5: true,
-      onplay: () => setIsPlaying(true),
       onpause: () => setIsPlaying(false),
     });
 
@@ -32,6 +31,7 @@ const MusicButtons = () => {
       soundRef.current.pause();
     } else {
       soundRef.current.play();
+      setIsPlaying(true);
     }
   };
 
