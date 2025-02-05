@@ -1,45 +1,45 @@
 "use client";
 
 import { CirclePause, CirclePlay, SkipBack, SkipForward } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import { Howl } from "howler";
 
 const MusicButtons = () => {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const soundRef = useRef<Howl | null>(null);
+  const musicSrc = "/music/electric.ogg";
 
   useEffect(() => {
-    const audioElem = new Audio("/music/electric.ogg");
-    audioElem.volume = 0.1;
-    audioElem.preload = "auto";
-    setAudio(audioElem);
-  }, []);
+    soundRef.current = new Howl({
+      src: musicSrc,
+      volume: 0.1,
+      onplay: () => setIsPlaying(true),
+      onpause: () => setIsPlaying(false),
+    });
 
-  const handlePlay = async () => {
-    if (!audio) return;
-
-    try {
-      if (isPlaying) {
-        audio.pause();
-        setIsPlaying(false);
-      } else {
-        await audio.play();
-        setIsPlaying(true);
+    return () => {
+      if (soundRef.current) {
+        soundRef.current.unload();
       }
-    } catch (e) {
-      console.error("Audio play failed: ", e);
+    };
+  }, [musicSrc]);
+
+  const handlePlay = () => {
+    if (!soundRef.current) return;
+    if (isPlaying) {
+      soundRef.current.pause();
+    } else {
+      soundRef.current.play();
     }
   };
 
   const handleReset = async () => {
-    if (!audio) return;
+    if (!soundRef.current) return;
 
-    audio.currentTime = 0;
-    try {
-      await audio.play();
-      setIsPlaying(true);
-    } catch (e) {
-      console.error("Audio reset failed: ", e);
-    }
+    soundRef.current.stop();
+
+    soundRef.current.play();
+    setIsPlaying(true);
   };
 
   return (
