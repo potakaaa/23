@@ -1,14 +1,14 @@
 import ConfettiDrop from "./components/ConfettiDrop";
 import PressMe from "./components/PressMe";
 import PlayPuzzle from "./components/PlayPuzzle";
-import MusicPlayer from "./components/MusicPlayer";
 import ValButton from "./components/ValButton";
+import { CirclePlay, Play, SkipBack, SkipForward } from "lucide-react";
+import MusicButtons from "./components/MusicButtons";
 
 const Happy23 = () => {
   return (
     <div className="flex flex-col h-screen w-full justify-center items-center space-y-10">
       <ConfettiDrop />
-      <MusicPlayer />
       <div className="flex flex-col space-y-1">
         <p className="font-extrabold tracking-tight text-4xl drop-shadow text-primary animate-slidein [--slidein-delay:300ms] opacity-0">
           Happy 23rd
@@ -22,6 +22,18 @@ const Happy23 = () => {
         <PlayPuzzle />
         <ValButton />
       </div>
+      <section
+        id="player-container"
+        className="bg-card w-9/12 h-10 rounded-full flex flex-row justify-between items-center animate-slidein [--slidein-delay:300ms] opacity-0 shadow-lg px-8 p-2"
+      >
+        <div className="flex text-left flex-col space-y-0">
+          <p className="text-xs font-bold tracking-tight drop-shadow-sm">
+            Electric Love
+          </p>
+          <p className="text-[10px] font-thin tracking-tighter">Børns ‧ 2015</p>
+        </div>
+        <MusicButtons />
+      </section>
     </div>
   );
 };
